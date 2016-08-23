@@ -64,6 +64,22 @@ strong {
     font-weight: 500;
 }
 
+h2 strong {
+  background-color: #e81c4f;
+  color: #ffffe8;
+  padding: 1px;
+  text-transform: uppercase;
+}
+h2 em {
+  background-color: #ffffe8;
+  color: #e81c4f;
+  padding: 1px;
+  text-transform: lowercase;
+}
+h2 em::before {
+  content: ".";
+}
+
 main {
     padding: 0 1em 4em 1em;
 }
