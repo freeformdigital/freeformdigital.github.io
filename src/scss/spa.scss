@@ -1,0 +1,81 @@
+main > .tab:last-of-type {
+    order: 0;
+}
+
+main > article:last-of-type {
+    display: block;
+}
+
+main > article:target ~ article {
+    display: none;
+}
+
+main > article:target ~ .tab {
+    background-color: white;
+    font-weight: normal;
+}
+
+main > .tab:last-of-type {
+    background-color: white;
+    font-weight: bold;
+}
+
+main > article {
+    display: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.995)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+main > article:target {
+    display: block;
+    animation: pulse 0.3s linear 1;
+}
+
+@keyframes droop {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: #FFFFE8;
+    }
+}
+
+main > article:target + .tab {
+    font-weight: bold;
+    background-color: #FFFFE8;
+    animation: droop 2s linear 1;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > .tab {
+    order: 1;
+}
+
+main > article {
+    order: 3;
+}
+
+article {
+    min-width: 100%;
+    padding: 0.7rem;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+main > .tab {
+    padding: 1em;
+    color: #555;
+    text-decoration: none;
+}
